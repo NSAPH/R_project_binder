@@ -1,0 +1,25 @@
+library(CausalGPS)
+m_d <- generate_syn_data(sample_size = 100)
+pseuoo_pop <- generate_pseudo_pop(m_d$Y,
+                                  m_d$treat,
+                                  m_d[c("cf1","cf2","cf3","cf4","cf5","cf6")],
+                                  ci_appr = "matching",
+                                  pred_model = "sl",
+                                  gps_model = "parametric",
+                                  bin_seq = NULL,
+                                  trim_quantiles = c(0.01,0.99),
+                                  optimized_compile = FALSE,
+                                  use_cov_transform = FALSE,
+                                  transformers = list(),
+                                  sl_lib = c("m_xgboost"),
+                                  params = list(xgb_nrounds=c(10,20,30),
+                                                xgb_eta=c(0.1,0.2,0.3)),
+                                  nthread = 1,
+                                  covar_bl_method = "absolute",
+                                  covar_bl_trs = 0.1,
+                                  covar_bl_trs_type= "mean",
+                                  max_attempt = 1,
+                                  matching_fun = "matching_l1",
+                                  delta_n = 1,
+                                  scale = 0.5)
+
