@@ -1,6 +1,6 @@
 # RStudio on Binder
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NSAPH/R_project_binder/main?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NSAPH/R_project_binder/master?urlpath=rstudio)
 
 Template from https://github.com/rocker-org/binder
 
